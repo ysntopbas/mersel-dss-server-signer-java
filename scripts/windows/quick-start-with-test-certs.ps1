@@ -1,4 +1,4 @@
-# PowerShell Script: Hızlı Başlatma - Test Sertifikaları ile
+﻿# PowerShell Script: Hızlı Başlatma - Test Sertifikaları ile
 # Windows için Sign API hızlı başlatma script'i
 
 $ErrorActionPreference = "Stop"
@@ -40,17 +40,17 @@ if ([string]::IsNullOrEmpty($certChoice)) {
 # Sertifika bilgilerini ayarla
 switch ($certChoice) {
     "1" {
-        $pfxFile = "testkurum01@test.com.tr_614573.pfx"
+        $pfxFile = "testkurum01_rsa2048@test.com.tr_614573.pfx"
         $pfxPassword = "614573"
         $certName = "testkurum01@test.com.tr"
     }
     "2" {
-        $pfxFile = "testkurum02@sm.gov.tr_059025.pfx"
+        $pfxFile = "testkurum02_rsa2048@sm.gov.tr_059025.pfx"
         $pfxPassword = "059025"
         $certName = "testkurum02@sm.gov.tr"
     }
     "3" {
-        $pfxFile = "testkurum3@test.com.tr_181193.pfx"
+        $pfxFile = "testkurum03_rsa2048@test.com.tr_181193.pfx"
         $pfxPassword = "181193"
         $certName = "testkurum3@test.com.tr"
     }
@@ -65,8 +65,8 @@ Write-ColorOutput Green "✅ Seçilen sertifika: $certName"
 Write-Output ""
 
 # PFX dosya yollarını kontrol et
-$pfxPath1 = ".\resources\test-certs\$pfxFile"
-$pfxPath2 = ".\src\main\resources\certs\$pfxFile"
+$pfxPath1 = "resources\test-certs\$pfxFile"
+$pfxPath2 = "src\main\resources\certs\$pfxFile"
 
 if (Test-Path $pfxPath1) {
     $pfxPath = $pfxPath1

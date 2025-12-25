@@ -9,7 +9,7 @@ $projectRoot = Split-Path -Parent (Split-Path -Parent $scriptPath)
 Set-Location $projectRoot
 
 # Environment variables
-$env:PFX_PATH = ".\resources\test-certs\testkurum02@sm.gov.tr_059025.pfx"
+$env:PFX_PATH = "resources\test-certs\testkurum02_rsa2048@sm.gov.tr_059025.pfx"
 $env:CERTIFICATE_PIN = "059025"
 $env:CERTIFICATE_ALIAS = "1"
 $env:IS_TUBITAK_TSP = "false"
